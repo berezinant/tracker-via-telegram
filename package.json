@@ -1,13 +1,18 @@
 {
   "name": "tracker-via-telegram",
   "version": "0.0.1",
+  "author": "berezinant",
   "dependencies": {
     "node-telegram-bot-api": "^0.61.0"
   },
   "devDependencies": {
-    "dotenv": "^16.0.3"
+    "@types/node": "^18.11.18",
+    "@types/node-telegram-bot-api": "^0.57.6",
+    "dotenv": "^16.0.3",
+    "typescript": "^4.9.4"
   },
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./build/index.js",
+    "build": "./node_modules/.bin/tsc --project ./tsconfig.json --watch"
   }
 }
